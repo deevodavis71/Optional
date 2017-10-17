@@ -12,18 +12,18 @@ import java.util.Optional;
 public class TestController {
 
     @RequestMapping("/test")
-    public String test (@RequestBody MyDTO dto) {
+    public String test(@RequestBody MyDTO dto) {
 
-        System.out.println (dto);
+        System.out.println(dto);
 
-        System.out.println ("Name present: " + hasValue(dto.getName()));
-        System.out.println ("Number present: " + hasValue(dto.getNumber()));
+        System.out.println("Name present: " + hasValue(dto.getName()));
+        System.out.println("Number present: " + hasValue(dto.getNumber()));
 
         return "Tested it!";
 
     }
 
-    public static <T> boolean hasValue (Optional<T> opt) {
+    public static <T> boolean hasValue(Optional<T> opt) {
 
         return opt != null && opt.isPresent();
 
