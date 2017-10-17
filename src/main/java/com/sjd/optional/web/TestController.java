@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Optional;
+import static com.sjd.optional.utils.OptionalUtils.hasValue;
 
 @RequestMapping("/api")
 @RestController
@@ -22,12 +22,5 @@ public class TestController {
         return "Tested it!";
 
     }
-
-    public static <T> boolean hasValue(Optional<T> opt) {
-
-        return opt != null && opt.isPresent();
-
-    }
-
 
 }
