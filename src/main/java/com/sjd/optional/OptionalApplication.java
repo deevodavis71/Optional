@@ -8,11 +8,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class OptionalApplication {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 
-		ObjectMapper mapper = new ObjectMapper();
-		mapper.registerModule(new Jdk8Module());
+        ObjectMapper mapper = new ObjectMapper();
+        mapper.registerModule(new Jdk8Module());
 
-		SpringApplication.run(OptionalApplication.class, args);
-	}
+        SpringApplication.run(OptionalApplication.class, args);
+    }
 }
