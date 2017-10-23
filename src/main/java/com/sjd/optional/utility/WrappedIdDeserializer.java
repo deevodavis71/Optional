@@ -1,4 +1,4 @@
-package com.sjd.entity.com.sjd.optional.utility;
+package com.sjd.optional.utility;
 
 import java.io.IOException;
 

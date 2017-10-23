@@ -2,8 +2,8 @@ package com.sjd.optional.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.sjd.entity.com.sjd.optional.utility.WrappedId;
-import com.sjd.entity.com.sjd.optional.utility.WrappedIdDeserializer;
+import com.sjd.optional.utility.WrappedId;
+import com.sjd.optional.utility.WrappedIdDeserializer;
 import lombok.Data;
 
 @Data
