@@ -1,11 +1,13 @@
 package com.sjd.optional.web;
 
-import com.sjd.optional.dto.MyDTO;
+import static com.sjd.optional.utils.OptionalUtils.hasValue;
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import static com.sjd.optional.utils.OptionalUtils.hasValue;
+import com.sjd.optional.dto.MyDTO;
+import com.sjd.optional.dto.WrappedDTO;
 
 @RequestMapping("/api")
 @RestController
@@ -20,6 +22,15 @@ public class TestController {
         System.out.println("Number present: " + hasValue(dto.getNumber()));
 
         return "Tested it!";
+
+    }
+
+    @RequestMapping("/json")
+    public String testJsonDeserialize(@RequestBody WrappedDTO dto) {
+
+        System.out.println(dto);
+
+        return "Wrapped!";
 
     }
 
